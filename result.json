@@ -1,0 +1,571 @@
+[{
+  "_id": 164793,
+  "split": true,
+  "item_id": 164793,
+  "item_name": "Molly",
+  "pet_type": "Dog",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 20:55:07",
+  "item_listingType": "lost",
+  "item_suburb": "Alligator Creek",
+  "item_state": "QLD",
+  "images": [
+    {
+      "image_id": "220707",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164793/339302533Screenshot_20221026-161544.png",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164793/thumbnail/339302533Screenshot_20221026-161544_1666864599.png",
+      "url": "media/pets/164793/339302533Screenshot_20221026-161544.png",
+      "url_thumb": "media/pets/164793/thumbnail/339302533Screenshot_20221026-161544_1666864599.png"
+    }
+  ],
+  "description": "Leesa and Harry Maxwell 6 Benalla Road Oak Valley 0400213370 0400197474"
+},{
+  "_id": 164792,
+  "split": true,
+  "item_id": 164792,
+  "item_name": "Diego",
+  "pet_type": "Bird",
+  "item_gender": "Male",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 20:52:18",
+  "item_listingType": "lost",
+  "item_suburb": "Castle Hill",
+  "item_state": "NSW",
+  "images": [
+    {
+      "image_id": "220705",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164792/141012026341051A00-069C-4905-A758-7A4572C992FF.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164792/thumbnail/141012026341051A00-069C-4905-A758-7A4572C992FF_1666864536.png",
+      "url": "media/pets/164792/141012026341051A00-069C-4905-A758-7A4572C992FF.jpeg",
+      "url_thumb": "media/pets/164792/thumbnail/141012026341051A00-069C-4905-A758-7A4572C992FF_1666864536.png"
+    },
+    {
+      "image_id": "220708",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164792/105306504D4DF04D0-7EF3-4E2B-9D4A-861A81982D39.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164792/thumbnail/105306504D4DF04D0-7EF3-4E2B-9D4A-861A81982D39_1666864649.png",
+      "url": "media/pets/164792/105306504D4DF04D0-7EF3-4E2B-9D4A-861A81982D39.jpeg",
+      "url_thumb": "media/pets/164792/thumbnail/105306504D4DF04D0-7EF3-4E2B-9D4A-861A81982D39_1666864649.png"
+    },
+    {
+      "image_id": "220709",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164792/33668892202D946D8-03D2-4F6E-9480-2650C1E5674B.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164792/thumbnail/33668892202D946D8-03D2-4F6E-9480-2650C1E5674B_1666864824.png",
+      "url": "media/pets/164792/33668892202D946D8-03D2-4F6E-9480-2650C1E5674B.jpeg",
+      "url_thumb": "media/pets/164792/thumbnail/33668892202D946D8-03D2-4F6E-9480-2650C1E5674B_1666864824.png"
+    }
+  ],
+  "description": "Please help me find our boy. His a Sun Conure and his name is Diego. His a very friendly bird. Try’s to talk but can whistle very well.. He is very bright in colours… He has never flown away before so he will be very very scared…"
+},{
+  "_id": 164791,
+  "split": true,
+  "item_id": 164791,
+  "item_name": "Dodie",
+  "pet_type": "Bird",
+  "item_gender": "Male",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 19:42:53",
+  "item_listingType": "lost",
+  "item_suburb": "City Beach",
+  "item_state": "WA",
+  "images": [
+    {
+      "image": "https://lostpetfinders.com.au/sites/lpf/assets/img/bird_pic_not_available.png",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/assets/img/bird_pic_not_available.png",
+      "file_path": "/home/pathtosite/public_html/sites/lpf/../lpf/assets/img/bird_pic_not_available.png"
+    }
+  ],
+  "description": "Lost in the area around Kapinara Primary School City Beach."
+},{
+  "_id": 164789,
+  "split": true,
+  "item_id": 164789,
+  "item_name": "Zsa Zsa",
+  "pet_type": "Cat",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 18:58:02",
+  "item_listingType": "lost",
+  "item_suburb": "Auchenflower",
+  "item_state": "QLD",
+  "images": [
+    {
+      "image_id": "220703",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164789/13631825102E358480-06EF-4F0D-A95E-89A34D745F9F.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164789/thumbnail/13631825102E358480-06EF-4F0D-A95E-89A34D745F9F_1666857494.png",
+      "url": "media/pets/164789/13631825102E358480-06EF-4F0D-A95E-89A34D745F9F.jpeg",
+      "url_thumb": "media/pets/164789/thumbnail/13631825102E358480-06EF-4F0D-A95E-89A34D745F9F_1666857494.png"
+    }
+  ],
+  "description": "Missing our indoor Tonkinese girl. She is very friendly, timid at first, but warms up quickly."
+},{
+  "_id": 164788,
+  "split": true,
+  "item_id": 164788,
+  "item_name": "Miffy",
+  "pet_type": "Cat",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 18:53:03",
+  "item_listingType": "lost",
+  "item_suburb": "Princes Hill",
+  "item_state": "VIC",
+  "images": [
+    {
+      "image_id": "220701",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164788/12944717497B28762E-CF9A-451B-BB34-2CCA70D8C1CE.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164788/thumbnail/12944717497B28762E-CF9A-451B-BB34-2CCA70D8C1CE_1666857206.png",
+      "url": "media/pets/164788/12944717497B28762E-CF9A-451B-BB34-2CCA70D8C1CE.jpeg",
+      "url_thumb": "media/pets/164788/thumbnail/12944717497B28762E-CF9A-451B-BB34-2CCA70D8C1CE_1666857206.png"
+    },
+    {
+      "image_id": "220702",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164788/18768625065AE851FC-0B6A-40C6-AD8F-B82EA731BCB6.png",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164788/thumbnail/18768625065AE851FC-0B6A-40C6-AD8F-B82EA731BCB6_1666857242.png",
+      "url": "media/pets/164788/18768625065AE851FC-0B6A-40C6-AD8F-B82EA731BCB6.png",
+      "url_thumb": "media/pets/164788/thumbnail/18768625065AE851FC-0B6A-40C6-AD8F-B82EA731BCB6_1666857242.png"
+    }
+  ],
+  "description": "Little Miffy went missing overnight. She is a beautiful small exotic with black & whit face white body & tortoise shell tail. Sweet & cuddly, sometimes shy. Xx"
+},{
+  "_id": 164786,
+  "split": true,
+  "item_id": 164786,
+  "item_name": "Mia",
+  "pet_type": "Cat",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 17:43:31",
+  "item_listingType": "lost",
+  "item_suburb": "Craigieburn",
+  "item_state": "VIC",
+  "images": [
+    {
+      "image_id": "220698",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164786/9870983822D6684DC-01EB-49B9-AE25-2AC92C72E4E4.png",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164786/thumbnail/9870983822D6684DC-01EB-49B9-AE25-2AC92C72E4E4_1666853089.png",
+      "url": "media/pets/164786/9870983822D6684DC-01EB-49B9-AE25-2AC92C72E4E4.png",
+      "url_thumb": "media/pets/164786/thumbnail/9870983822D6684DC-01EB-49B9-AE25-2AC92C72E4E4_1666853089.png"
+    },
+    {
+      "image_id": "220699",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164786/1144711769E5B5060B-C74F-47BA-88B2-178B6A1E6A5E.png",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164786/thumbnail/1144711769E5B5060B-C74F-47BA-88B2-178B6A1E6A5E_1666853283.png",
+      "url": "media/pets/164786/1144711769E5B5060B-C74F-47BA-88B2-178B6A1E6A5E.png",
+      "url_thumb": "media/pets/164786/thumbnail/1144711769E5B5060B-C74F-47BA-88B2-178B6A1E6A5E_1666853283.png"
+    }
+  ],
+  "description": "Please let me know any information Really concerned for her as we had just moved houses and she was afraid, she’s also afraid of strangers but she is the sweetest cat and would not harm anybody. Call me on 0435401999 for any information"
+},{
+  "_id": 164785,
+  "split": true,
+  "item_id": 164785,
+  "item_name": "Jazzy",
+  "pet_type": "Cat",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 17:37:18",
+  "item_listingType": "lost",
+  "item_suburb": "Lower Plenty",
+  "item_state": "VIC",
+  "images": [
+    {
+      "image_id": "220697",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164785/1241917176B6BA0ADE-D185-4904-A3D7-B693517620DE.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164785/thumbnail/1241917176B6BA0ADE-D185-4904-A3D7-B693517620DE_1666852729.png",
+      "url": "media/pets/164785/1241917176B6BA0ADE-D185-4904-A3D7-B693517620DE.jpeg",
+      "url_thumb": "media/pets/164785/thumbnail/1241917176B6BA0ADE-D185-4904-A3D7-B693517620DE_1666852729.png"
+    }
+  ],
+  "description": "Siamese cat chocolate point  blue eyes"
+},{
+  "_id": 164783,
+  "split": true,
+  "item_id": 164783,
+  "item_name": "Biggles",
+  "pet_type": "Cat",
+  "item_gender": "Male",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 16:50:07",
+  "item_listingType": "lost",
+  "item_suburb": "Broadbeach Waters",
+  "item_state": "QLD",
+  "images": [
+    {
+      "image_id": "220695",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164783/314903318E4FD60A5-BC80-446F-A3D5-5699B871E52C.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164783/thumbnail/314903318E4FD60A5-BC80-446F-A3D5-5699B871E52C_1666849872.png",
+      "url": "media/pets/164783/314903318E4FD60A5-BC80-446F-A3D5-5699B871E52C.jpeg",
+      "url_thumb": "media/pets/164783/thumbnail/314903318E4FD60A5-BC80-446F-A3D5-5699B871E52C_1666849872.png"
+    }
+  ],
+  "description": "Large  / fluffy long haired with short legs , thick long fluffy tail Beautiful gentle natured  CAT Will just roll onto his back for a scratch Loves food Doesn’t ever leave the garden prefers being indoors Missing from Broadbeach Waters home Please contact me if you have seen him He is a much loved member of the family Thank you Jacqui 0416028696"
+},{
+  "_id": 164782,
+  "split": true,
+  "item_id": 164782,
+  "item_name": "Neo",
+  "pet_type": "Cat",
+  "item_gender": "Male",
+  "item_flag": "reunited",
+  "item_datefound": "2022-10-27",
+  "item_date_created": "2022-10-27 16:47:34",
+  "item_listingType": "lost",
+  "item_suburb": "Tullamarine",
+  "item_state": "VIC",
+  "images": [
+    {
+      "image_id": "220693",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164782/372623479IMG-20221027-WA0002.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164782/thumbnail/372623479IMG-20221027-WA0002_1666849744.png",
+      "url": "media/pets/164782/372623479IMG-20221027-WA0002.jpg",
+      "url_thumb": "media/pets/164782/thumbnail/372623479IMG-20221027-WA0002_1666849744.png"
+    },
+    {
+      "image_id": "220694",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164782/1697145712IMG-20221027-WA0003.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164782/thumbnail/1697145712IMG-20221027-WA0003_1666849820.png",
+      "url": "media/pets/164782/1697145712IMG-20221027-WA0003.jpg",
+      "url_thumb": "media/pets/164782/thumbnail/1697145712IMG-20221027-WA0003_1666849820.png"
+    },
+    {
+      "image_id": "220692",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164782/1312948186IMG-20221027-WA0000.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164782/thumbnail/1312948186IMG-20221027-WA0000.jpg",
+      "url": "media/pets/164782/1312948186IMG-20221027-WA0000.jpg",
+      "url_thumb": "media/pets/164782/thumbnail/1312948186IMG-20221027-WA0000.jpg"
+    }
+  ],
+  "description": "Neo has turned up on his own alive and well"
+},{
+  "_id": 164781,
+  "split": true,
+  "item_id": 164781,
+  "item_name": "",
+  "pet_type": "Rabbit",
+  "item_gender": "Unknown",
+  "item_flag": "found",
+  "item_datefound": "2022-10-25",
+  "item_date_created": "2022-10-27 16:40:35",
+  "item_listingType": "found",
+  "item_suburb": "Riverwood",
+  "item_state": "NSW",
+  "images": [
+    {
+      "image": "https://lostpetfinders.com.au/sites/lpf/assets/img/rabbit_pic_not_available.png",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/assets/img/rabbit_pic_not_available.png",
+      "file_path": "/home/pathtosite/public_html/sites/lpf/../lpf/assets/img/rabbit_pic_not_available.png"
+    }
+  ],
+  "description": "Rabbit found at Bland Oval close to Bonds Road, Riverwood NSW"
+},{
+  "_id": 164779,
+  "split": true,
+  "item_id": 164779,
+  "item_name": "Nala",
+  "pet_type": "Cat",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 16:22:26",
+  "item_listingType": "lost",
+  "item_suburb": "Chatswood",
+  "item_state": "NSW",
+  "images": [
+    {
+      "image_id": "220688",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164779/72130963920220902_081808.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164779/thumbnail/72130963920220902_081808_1666848233.png",
+      "url": "media/pets/164779/72130963920220902_081808.jpg",
+      "url_thumb": "media/pets/164779/thumbnail/72130963920220902_081808_1666848233.png"
+    },
+    {
+      "image_id": "220689",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164779/20150222820220911_082411.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164779/thumbnail/20150222820220911_082411_1666848269.png",
+      "url": "media/pets/164779/20150222820220911_082411.jpg",
+      "url_thumb": "media/pets/164779/thumbnail/20150222820220911_082411_1666848269.png"
+    },
+    {
+      "image_id": "220690",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164779/77864783620220730_201011.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164779/thumbnail/77864783620220730_201011_1666848290.png",
+      "url": "media/pets/164779/77864783620220730_201011.jpg",
+      "url_thumb": "media/pets/164779/thumbnail/77864783620220730_201011_1666848290.png"
+    }
+  ],
+  "description": "Nala is incredibly friendly. She fell out of a 4th floor window and by the time I got outside she'd gone. She was last seen wearing a grey plastic flea collar. She is a smoky or creamy grey tabby with hints of orange. She has a V shaped white chest and partly white feet. She also has a white chin. The usual M symbol you get on a tabby's head isn't quite there on Nala, instead the outside legs of the M are more like elongated brown spots not connected to the darker stripes on her forehead."
+},{
+  "_id": 164778,
+  "split": true,
+  "item_id": 164778,
+  "item_name": "Muezza",
+  "pet_type": "Cat",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 16:04:53",
+  "item_listingType": "lost",
+  "item_suburb": "Prestons",
+  "item_state": "NSW",
+  "images": [
+    {
+      "image_id": "220686",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164778/41739180020221026_122600.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164778/thumbnail/41739180020221026_122600.jpg",
+      "url": "media/pets/164778/41739180020221026_122600.jpg",
+      "url_thumb": "media/pets/164778/thumbnail/41739180020221026_122600.jpg"
+    },
+    {
+      "image_id": "220687",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164778/224947198IMG-20221027-WA0000.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164778/thumbnail/224947198IMG-20221027-WA0000_1666847412.png",
+      "url": "media/pets/164778/224947198IMG-20221027-WA0000.jpg",
+      "url_thumb": "media/pets/164778/thumbnail/224947198IMG-20221027-WA0000_1666847412.png"
+    }
+  ],
+  "description": "Her name is Muezza, she is white with grey spots. Her tail is all grey ,but tip of her tail is white. Last seen 25-10-22 around kookaburra Rd Prestons. If you found or seen her please contact 0420 608 005. Thank you"
+},{
+  "_id": 164775,
+  "split": true,
+  "item_id": 164775,
+  "item_name": "Lyla",
+  "pet_type": "Cat",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 14:01:59",
+  "item_listingType": "lost",
+  "item_suburb": "Officer",
+  "item_state": "VIC",
+  "images": [
+    {
+      "image_id": "220678",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164775/424102343FEEC7EBD-C6E4-420F-BBFB-A31413CB9944.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164775/thumbnail/424102343FEEC7EBD-C6E4-420F-BBFB-A31413CB9944.jpeg",
+      "url": "media/pets/164775/424102343FEEC7EBD-C6E4-420F-BBFB-A31413CB9944.jpeg",
+      "url_thumb": "media/pets/164775/thumbnail/424102343FEEC7EBD-C6E4-420F-BBFB-A31413CB9944.jpeg"
+    }
+  ],
+  "description": "Very friendly tabby cat missing in Officer area near Bridgewood Primary School. New to the area so may be in hiding"
+},{
+  "_id": 164773,
+  "split": true,
+  "item_id": 164773,
+  "item_name": "Skye",
+  "pet_type": "Dog",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 13:07:36",
+  "item_listingType": "lost",
+  "item_suburb": "Cambridge Park",
+  "item_state": "NSW",
+  "images": [
+    {
+      "image_id": "220677",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164773/55952037265D8D65D-7892-419E-A8E4-8833745D23BB.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164773/thumbnail/55952037265D8D65D-7892-419E-A8E4-8833745D23BB_1666836488.png",
+      "url": "media/pets/164773/55952037265D8D65D-7892-419E-A8E4-8833745D23BB.jpeg",
+      "url_thumb": "media/pets/164773/thumbnail/55952037265D8D65D-7892-419E-A8E4-8833745D23BB_1666836488.png"
+    }
+  ],
+  "description": "she ran away from home and we searched all the streets between us and still couldnt find her"
+},{
+  "_id": 164772,
+  "split": true,
+  "item_id": 164772,
+  "item_name": "Cosmo",
+  "pet_type": "Cat",
+  "item_gender": "Male",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 12:49:30",
+  "item_listingType": "lost",
+  "item_suburb": "Kensington",
+  "item_state": "WA",
+  "images": [
+    {
+      "image_id": "220674",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164772/1930051458IMG_3383.JPG",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164772/thumbnail/1930051458IMG_3383_1666835483.png",
+      "url": "media/pets/164772/1930051458IMG_3383.JPG",
+      "url_thumb": "media/pets/164772/thumbnail/1930051458IMG_3383_1666835483.png"
+    },
+    {
+      "image_id": "220675",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164772/1211063569IMG_3384.JPG",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164772/thumbnail/1211063569IMG_3384_1666835512.png",
+      "url": "media/pets/164772/1211063569IMG_3384.JPG",
+      "url_thumb": "media/pets/164772/thumbnail/1211063569IMG_3384_1666835512.png"
+    },
+    {
+      "image_id": "220676",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164772/179402165IMG_3382.JPG",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164772/thumbnail/179402165IMG_3382_1666835542.png",
+      "url": "media/pets/164772/179402165IMG_3382.JPG",
+      "url_thumb": "media/pets/164772/thumbnail/179402165IMG_3382_1666835542.png"
+    }
+  ],
+  "description": "Normally an indoor cat. No collar but is microchipped. Please keep an eye out for him in your backyard, sheds etc. He is a bit of a scaredy cat so unlikely to come when called. Thanks for your Help!! Dave"
+},{
+  "_id": 164771,
+  "split": true,
+  "item_id": 164771,
+  "item_name": "Kitkat",
+  "pet_type": "Cat",
+  "item_gender": "Male",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 12:30:35",
+  "item_listingType": "lost",
+  "item_suburb": "Rasmussen",
+  "item_state": "QLD",
+  "images": [
+    {
+      "image_id": "220671",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164771/70785063321c07c5a-6fa3-4528-a75b-1b24a03653e5photo.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164771/thumbnail/70785063321c07c5a-6fa3-4528-a75b-1b24a03653e5photo_1666834346.png",
+      "url": "media/pets/164771/70785063321c07c5a-6fa3-4528-a75b-1b24a03653e5photo.jpeg",
+      "url_thumb": "media/pets/164771/thumbnail/70785063321c07c5a-6fa3-4528-a75b-1b24a03653e5photo_1666834346.png"
+    },
+    {
+      "image_id": "220672",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164771/948637839c6f0210b-346b-4676-ac55-1a2f4e36a5cdphoto.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164771/thumbnail/948637839c6f0210b-346b-4676-ac55-1a2f4e36a5cdphoto_1666834364.png",
+      "url": "media/pets/164771/948637839c6f0210b-346b-4676-ac55-1a2f4e36a5cdphoto.jpeg",
+      "url_thumb": "media/pets/164771/thumbnail/948637839c6f0210b-346b-4676-ac55-1a2f4e36a5cdphoto_1666834364.png"
+    },
+    {
+      "image_id": "220673",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164771/40810708720220923_202457.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164771/thumbnail/40810708720220923_202457_1666834397.png",
+      "url": "media/pets/164771/40810708720220923_202457.jpg",
+      "url_thumb": "media/pets/164771/thumbnail/40810708720220923_202457_1666834397.png"
+    }
+  ],
+  "description": "Kit-Kat has been missing since the heavy rain on 20OCT22. He's predominately black with white paws and chest. He's skittish but friendly. He was last seen in the Bluewattle Estate at 0730H on 20OCT22 and hasn't been spotted since. $250 reward for finding him as compensation and as a personal thank you.  Call and/or Text Charles on 0412224758"
+},{
+  "_id": 164770,
+  "split": true,
+  "item_id": 164770,
+  "item_name": "Dexter",
+  "pet_type": "Dog",
+  "item_gender": "Male",
+  "item_flag": "reunited",
+  "item_datefound": "2022-10-27",
+  "item_date_created": "2022-10-27 12:18:34",
+  "item_listingType": "lost",
+  "item_suburb": "Buxton",
+  "item_state": "VIC",
+  "images": [
+    {
+      "image_id": "220670",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164770/295168320A7335CEC-3311-464A-A24E-57B444CC38A1.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164770/thumbnail/295168320A7335CEC-3311-464A-A24E-57B444CC38A1.jpeg",
+      "url": "media/pets/164770/295168320A7335CEC-3311-464A-A24E-57B444CC38A1.jpeg",
+      "url_thumb": "media/pets/164770/thumbnail/295168320A7335CEC-3311-464A-A24E-57B444CC38A1.jpeg"
+    }
+  ],
+  "description": "Dexter and Zara have returned after 2 days lost."
+},{
+  "_id": 164769,
+  "split": true,
+  "item_id": 164769,
+  "item_name": "Bubba",
+  "pet_type": "Dog",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 11:41:53",
+  "item_listingType": "lost",
+  "item_suburb": "Miami",
+  "item_state": "QLD",
+  "images": [
+    {
+      "image_id": "220669",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164769/63078054316915141-426E-49F8-979C-275A8FD9C1D9.jpeg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164769/thumbnail/63078054316915141-426E-49F8-979C-275A8FD9C1D9_1666831493.png",
+      "url": "media/pets/164769/63078054316915141-426E-49F8-979C-275A8FD9C1D9.jpeg",
+      "url_thumb": "media/pets/164769/thumbnail/63078054316915141-426E-49F8-979C-275A8FD9C1D9_1666831493.png"
+    }
+  ],
+  "description": "Bubba never wanders but looks like she did today. She is on heavy medication to keep her alive. Please let me know if you find her!!"
+},{
+  "_id": 164767,
+  "split": true,
+  "item_id": 164767,
+  "item_name": "Rosey",
+  "pet_type": "Bird",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 10:45:36",
+  "item_listingType": "lost",
+  "item_suburb": "Narwee",
+  "item_state": "NSW",
+  "images": [
+    {
+      "image_id": "220667",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164767/1272635957inbound6020796314075697896.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164767/thumbnail/1272635957inbound6020796314075697896_1666827971.png",
+      "url": "media/pets/164767/1272635957inbound6020796314075697896.jpg",
+      "url_thumb": "media/pets/164767/thumbnail/1272635957inbound6020796314075697896_1666827971.png"
+    }
+  ],
+  "description": "Responds to rosey and is friendly"
+},{
+  "_id": 164763,
+  "split": true,
+  "item_id": 164763,
+  "item_name": "Ginger Brothers",
+  "pet_type": "Cat",
+  "item_gender": "Male",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 09:12:21",
+  "item_listingType": "lost",
+  "item_suburb": "Rapid Creek",
+  "item_state": "NT",
+  "images": [
+    {
+      "image_id": "220663",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164763/1983203702Screenshot_20221022-180924_(1).png",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164763/thumbnail/1983203702Screenshot_20221022-180924_(1)_1666822372.png",
+      "url": "media/pets/164763/1983203702Screenshot_20221022-180924_(1).png",
+      "url_thumb": "media/pets/164763/thumbnail/1983203702Screenshot_20221022-180924_(1)_1666822372.png"
+    }
+  ],
+  "description": "One of the cat has a birth mark on his white paw, the mark is a little dot of ginger on his white paw, they're tabby kitten cats"
+},{
+  "_id": 164759,
+  "split": true,
+  "item_id": 164759,
+  "item_name": "Thao",
+  "pet_type": "Cat",
+  "item_gender": "Female",
+  "item_flag": "lost",
+  "item_datefound": null,
+  "item_date_created": "2022-10-27 01:04:48",
+  "item_listingType": "lost",
+  "item_suburb": "Adelaide",
+  "item_state": "SA",
+  "images": [
+    {
+      "image_id": "220653",
+      "image": "https://lostpetfinders.com.au/sites/lpf/media/pets/164759/1157178666IMG_20220218_111155.jpg",
+      "thumb": "https://lostpetfinders.com.au/sites/lpf/media/pets/164759/thumbnail/1157178666IMG_20220218_111155_1666793275.png",
+      "url": "media/pets/164759/1157178666IMG_20220218_111155.jpg",
+      "url_thumb": "media/pets/164759/thumbnail/1157178666IMG_20220218_111155_1666793275.png"
+    }
+  ],
+  "description": "Thao is a medium to large sized cat with tuxedo markings . Dark face white chest white paws white stomach black tail"
+}]
