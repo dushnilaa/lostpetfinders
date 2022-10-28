@@ -43,9 +43,8 @@ class Parser:
         return all_animal
 
     def download_json(self, headers=True, proxies=None):
-        start_date = '26/10/2022'
+        start_date = '27/09/2022'
         count = 0
-        results = []
         while True:
             start_url = f'https://lostpetfinders.com.au/pets/map_bound_items?status=all&address=&pet_type=' \
                         f'&radius=20&pet_id=&gender=&breed=&color=&listed_after={start_date}&micro_chip=' \
@@ -62,12 +61,10 @@ class Parser:
                 break
 
             result = self.parser_search_result(list_animal)
-            for res in result:
-                results.append(res)
+            self.write_db(result)
+
             time.sleep(5)
             count += 9
-
-        return results
 
     @classmethod
     def parser_page(cls, url, headers=None, proxy=None):
@@ -80,10 +77,6 @@ class Parser:
         desc = tree.xpath('//div[@class="description"]//text()')
         descriptiion_list = [i.strip() for i in desc]
         descriptiion = ' '.join(descriptiion_list).strip()
-
-        # next_animal = tree.xpath('//div[@class="right-item-nav"]//a/@href')
-        # if len(next_animal) == 2:
-        #     next_animal_link = next_animal[1]
 
         result = {
             'item_id': int(item_id),
