@@ -1,5 +1,4 @@
-from sqlalchemy import create_engine, Column, String, Integer, Text
-from sqlalchemy.exc import OperationalError
+from sqlalchemy import create_engine, Column, String, Integer, Text, JSON
 from sqlalchemy.ext.declarative import declarative_base
 
 
@@ -25,7 +24,7 @@ class User(Base):
     author = Column(String(length=250), nullable=True)
     address = Column(String(length=250), nullable=True)
     descr = Column(Text, nullable=True)
-    pics = Column(Text, nullable=True)
+    pics = Column(JSON, nullable=True)
 
 
 sql_expression = '''
@@ -45,7 +44,7 @@ CREATE TABLE `parsed_pets` (
   `author` VARCHAR(250) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
   `address` VARCHAR(250) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
   `descr` TEXT NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
-  `pics` TEXT NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
+  `pics` JSON DEFAULT NULL',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `website_ws_id` (`website`, `ws_id`) USING BTREE
 )
@@ -54,8 +53,8 @@ ENGINE=InnoDB
 ;
 '''
 
-try:
-    result = engine.execute(sql_expression)
-except OperationalError:
-    pass
+# try:
+#     result = engine.execute(sql_expression)
+# except OperationalError:
+#     pass
 

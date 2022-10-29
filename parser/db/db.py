@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 class MethodsMongo:
     def __init__(self):
         client = MongoClient('mongodb://localhost:27017/')
-        self.db = client['test-database']['animal']
+        self.db = client['test-database']['animal2']
 
     def insert(self, dict_insert, *args):
         try:
@@ -29,7 +29,7 @@ class MethodsMongo:
 
 class MethodsMySQL:
     def __init__(self):
-        engine = create_engine("mysql://admin:admin@localhost:3306/test", echo=True)
+        engine = create_engine("mysql://admin:admin@127.0.0.1:3306/test", echo=True)
         Session = sessionmaker(bind=engine)
         Session.configure(bind=engine)
         self.session = Session()
@@ -48,7 +48,7 @@ class MethodsMySQL:
         self.session.rollback()
         self.session.execute(
             update(class_table)
-            .where(class_table.name == dict_insert.get('name'))
+            .where(class_table.ws_id == dict_insert.get('ws_id'))
             .values(**dict_insert)
         )
         self.session.commit()
