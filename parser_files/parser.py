@@ -1,19 +1,26 @@
 import json
 import time
-import datetime
+from datetime import datetime
 
 import requests
+import yaml
 from fake_useragent import UserAgent
 from lxml import html
 
-from db.db import MethodsMongo, MethodsMySQL
+from db.methods import MethodsMySQL
 from db.schemes import User
 
 
 class Parser:
     def __init__(self):
-        self.mongo = MethodsMongo()
         self.my_sql = MethodsMySQL()
+        self.sleep_sec = self.read_yaml()[1]['sleep_sec']
+        self.start_date_unix = self.read_yaml()[1]['start_date']
+        self.proxies = self.read_yaml()[1]['proxies']
+
+    def read_yaml(self):
+        with open('/home/work/projects/work/lostpetfinders/config.yaml') as fh:
+            return yaml.safe_load(fh)
 
     @classmethod
     def create_dict(cls, raw_dict):
@@ -28,15 +35,18 @@ class Parser:
 
         if raw_dict.get('item_date_created'):
             time_create = raw_dict.get('item_date_created')
-            date = datetime.datetime.strptime(time_create, "%Y-%m-%d %H:%M:%S")
-            time_stamp = datetime.datetime.timestamp(date)
+            date = datetime.strptime(time_create, "%Y-%m-%d %H:%M:%S")
+            time_stamp = datetime.timestamp(date)
             dict_insert['created_at'] = int(time_stamp)
 
-        if raw_dict.get('item_datefound'):
-            time_found = raw_dict.get('item_datefound')
-            date = datetime.datetime.strptime(time_found, "%Y-%m-%d")
-            time_stamp = datetime.datetime.timestamp(date)
-            dict_insert['happened_at'] = int(time_stamp)
+        try:
+            if raw_dict.get('item_datefound'):
+                time_found = raw_dict.get('item_datefound')
+                date = datetime.strptime(time_found, "%Y-%m-%d")
+                time_stamp = datetime.timestamp(date)
+                dict_insert['happened_at'] = int(time_stamp)
+        except:
+            pass
 
         if raw_dict.get('item_state') and raw_dict.get('item_suburb'):
             state = raw_dict.get('item_state')
@@ -70,13 +80,6 @@ class Parser:
             dict_insert['sex'] = 0
 
         return dict_insert
-
-    def write_db(self, data, *args):
-        if isinstance(data, dict):
-            data = [data]
-        for dict_ins in data:
-            dict_ins["_id"] = int(dict_ins.get('item_id'))
-            self.mongo.insert(dict_ins, *args)
 
     @classmethod
     def parser_search_result(cls, list_animal):
@@ -119,13 +122,15 @@ class Parser:
             'item_id': int(item_id),
             'description': descriptiion
         }
-
         return result
 
     def download_json(self, headers=True, proxies=None):
-        start_date = '27/10/2022'
         count = 0
         while True:
+
+            unixtime = datetime.now().timestamp() - self.start_date_unix
+            start_date = datetime.fromtimestamp(unixtime).strftime("%d/%m/%Y")
+
             start_url = f'https://lostpetfinders.com.au/pets/map_bound_items?status=all&address=&pet_type=' \
                         f'&radius=20&pet_id=&gender=&breed=&color=&listed_after={start_date}&micro_chip=' \
                         f'&lat=-24.9899066&lng=115.2063346&offset={count}&expand_radius=0'
@@ -133,7 +138,7 @@ class Parser:
             if headers:
                 headers = {'User-Agent': UserAgent().chrome}
             if proxies:
-                proxies = {}
+                proxies = self.proxies
             request = requests.get(url=start_url, headers=headers, proxies=proxies).text
 
             data = json.loads(request)
@@ -141,22 +146,15 @@ class Parser:
             if not list_animal:
                 print(start_url)
                 break
-            result = self.parser_search_result(list_animal)
-            self.write_db(result)
 
-            dicts = self.mongo.find_all({'joined': False})
-            for dict_animal in dicts:
-                id_animal = dict_animal.get('_id')
+            result_dicts = self.parser_search_result(list_animal)
+            for dict_animal in result_dicts:
+                id_animal = dict_animal.get('item_id')
                 url = f'https://lostpetfinders.com.au/pets/{id_animal}'
-                result = self.parser_page(url)
-                self.write_db([result], {'joined': True})
-                time.sleep(5)
+                result = self.parser_page(url, headers, proxies)
+                new_dict = self.create_dict(dict_animal | result)
+                self.my_sql.insert(new_dict, User)
+                time.sleep(self.sleep_sec)
 
-            dicts = self.mongo.find_all({'joined': True})
-            for dict_animal in dicts:
-                dict_insert = self.create_dict(dict_animal)
-                self.my_sql.insert(dict_insert, User)
-                self.write_db([dict_animal], {'write_mysql': True})
-
-            time.sleep(5)
+            time.sleep(self.sleep_sec)
             count += 9

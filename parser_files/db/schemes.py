@@ -1,13 +1,17 @@
+import yaml
 from sqlalchemy import create_engine, Column, String, Integer, Text, JSON
 from sqlalchemy.ext.declarative import declarative_base
 
 
+with open('/home/work/projects/work/lostpetfinders/config.yaml') as fh:
+    dictionary_data = yaml.safe_load(fh)
+
 Base = declarative_base()
-engine = create_engine("mysql://admin:admin@localhost:3306/test")
+engine = create_engine(dictionary_data[0]['mysql_path'])
 
 
 class User(Base):
-    __tablename__ = 'parsed_pets'
+    __tablename__ = dictionary_data[0]['name_table']
 
     id = Column(Integer, primary_key=True)
     status = Column(Integer, nullable=True)
@@ -27,8 +31,8 @@ class User(Base):
     pics = Column(JSON, nullable=True)
 
 
-sql_expression = '''
-CREATE TABLE `parsed_pets` (
+sql_expression = f'''
+CREATE TABLE `{dictionary_data[0]['name_table']}` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `status` INT(1) NULL DEFAULT NULL COMMENT '-1 - плохое, 0 - новый, 1 - обработано',
   `animal` INT(1) NULL DEFAULT NULL COMMENT '1 - dog, 2 - cat',

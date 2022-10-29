@@ -1,38 +1,20 @@
-from pymongo import MongoClient
-from pymongo.errors import DuplicateKeyError
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import create_engine, update
 from sqlalchemy.orm import sessionmaker
 
-
-class MethodsMongo:
-    def __init__(self):
-        client = MongoClient('mongodb://localhost:27017/')
-        self.db = client['test-database']['animal2']
-
-    def insert(self, dict_insert, *args):
-        try:
-            self.db.insert_one(dict_insert)
-        except DuplicateKeyError:
-            self.update(dict_insert, *args)
-
-    def update(self, dict_insert, *args):
-        dict_insert.update(*args)
-        self.db.update_one({'_id': dict_insert.get('_id')}, {'$set': dict_insert})
-
-    def find(self, *args):
-        return self.db.find_one(*args)
-
-    def find_all(self, *args):
-        return self.db.find(*args)
+import yaml
 
 
 class MethodsMySQL:
     def __init__(self):
-        engine = create_engine("mysql://admin:admin@127.0.0.1:3306/test", echo=True)
+        engine = create_engine(self.read_yaml()[0]['mysql_path'], echo=True)
         Session = sessionmaker(bind=engine)
         Session.configure(bind=engine)
         self.session = Session()
+
+    def read_yaml(self):
+        with open('/home/work/projects/work/lostpetfinders/config.yaml') as fh:
+            return yaml.safe_load(fh)
 
     def insert(self, dict_insert, class_table):
         ins = class_table(**dict_insert)
