@@ -19,7 +19,8 @@ class Parser:
         self.proxies = self.read_yaml()[1]['proxies']
 
     def read_yaml(self):
-        with open('/home/work/projects/work/lostpetfinders/config.yaml') as fh:
+        # with open('/home/work/projects/work/lostpetfinders/parser_files/config.yaml') as fh:
+        with open('config.yaml') as fh:
             return yaml.safe_load(fh)
 
     @classmethod

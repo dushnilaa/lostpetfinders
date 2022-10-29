@@ -3,7 +3,8 @@ from sqlalchemy import create_engine, Column, String, Integer, Text, JSON
 from sqlalchemy.ext.declarative import declarative_base
 
 
-with open('/home/work/projects/work/lostpetfinders/config.yaml') as fh:
+# with open('/home/work/projects/work/lostpetfinders/parser_files/config.yaml') as fh:
+with open('config.yaml') as fh:
     dictionary_data = yaml.safe_load(fh)
 
 Base = declarative_base()

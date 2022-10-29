@@ -1,0 +1,9 @@
+- mysql_path: mysql://admin:admin@127.0.0.1:3306/test
+  name_table: parsed_pets
+
+- proxies: {}
+  sleep_sec: 5
+#  start_date: 2592000
+# при каждодневном парсинге, необходимо закомментировать прошлую и расскоментировать нижнюю строку и пересобрать контейнер
+  start_date: 86400
+

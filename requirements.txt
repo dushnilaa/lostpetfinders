@@ -5,4 +5,5 @@ pymongo~=4.3.2
 SQLAlchemy~=1.4.42
 celery~=5.2.7
 mysqlclient
-schedule
+schedule~=1.1.0
+PyYAML~=6.0

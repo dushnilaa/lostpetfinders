@@ -1,13 +1,14 @@
-FROM python:3.8 AS builder
+FROM python:3.10 AS builder
 COPY requirements.txt .
 
 RUN pip install --user -r requirements.txt
 
-FROM python:3.8-slim
+FROM python:3.10-slim
 WORKDIR /code
 
 COPY --from=builder /root/.local /root/.local
-COPY parser .
+COPY config.yaml .
+COPY parser_files .
 RUN apt-get update
 RUN apt-get upgrade
 
