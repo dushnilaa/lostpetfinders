@@ -5,13 +5,14 @@ import schedule
 
 
 def job():
-    os.system('sudo docker run --rm --name parser_test -p 8080:8080 --network host'
-              ' -v /home/work/projects/test/docker:/usr/parser_files/app parser_image')
+    os.system('sudo docker run --rm --name lostpetfinders --network host lostpetfinders_image')
     time.sleep(2)
     # os.system('password')
 
-
-schedule.every(6).hour.do(job)
+# тест
+# schedule.every(1).minutes.do(job)
+# запуск каждые 6 часов
+# schedule.every(6).hour.do(job)
 
 
 while True:

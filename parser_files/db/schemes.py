@@ -3,7 +3,6 @@ from sqlalchemy import create_engine, Column, String, Integer, Text, JSON
 from sqlalchemy.ext.declarative import declarative_base
 
 
-# with open('/home/work/projects/work/lostpetfinders/parser_files/config.yaml') as fh:
 with open('config.yaml') as fh:
     dictionary_data = yaml.safe_load(fh)
 
@@ -32,8 +31,10 @@ class User(Base):
     pics = Column(JSON, nullable=True)
 
 
+name_table = dictionary_data[0]['name_table']
+
 sql_expression = f'''
-CREATE TABLE `{dictionary_data[0]['name_table']}` (
+CREATE TABLE `{name_table}` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `status` INT(1) NULL DEFAULT NULL COMMENT '-1 - плохое, 0 - новый, 1 - обработано',
   `animal` INT(1) NULL DEFAULT NULL COMMENT '1 - dog, 2 - cat',
@@ -49,7 +50,7 @@ CREATE TABLE `{dictionary_data[0]['name_table']}` (
   `author` VARCHAR(250) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
   `address` VARCHAR(250) NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
   `descr` TEXT NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
-  `pics` JSON DEFAULT NULL',
+  `pics` TEXT NULL DEFAULT NULL COLLATE 'utf8mb4_unicode_ci',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `website_ws_id` (`website`, `ws_id`) USING BTREE
 )
@@ -58,8 +59,5 @@ ENGINE=InnoDB
 ;
 '''
 
-# try:
-#     result = engine.execute(sql_expression)
-# except OperationalError:
-#     pass
+# result = engine.execute(sql_expression)
 
