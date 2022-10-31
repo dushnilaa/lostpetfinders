@@ -1,6 +1,9 @@
 # Настройка и запуск парсера
 
 1. Создать таблицу mysql, если не создана
-2. Настроить config.yaml
-3. Собрать образ: sudo docker build -t lostpetfinders_image . 
-4. Запустить образ: sudo docker run --rm --name lostpetfinders --network host lostpetfinders_image
+2.  Установить следующие зависимости:  
+sudo apt -y install python3-pip  
+sudo apt-get install -y python3-mysqldb  
+sudo pip install --user -r requirements.txt
+3. Настроить config.yaml
+4. запуск через run.py
