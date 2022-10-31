@@ -1,3 +1,5 @@
+import os
+
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import create_engine, update
 from sqlalchemy.orm import sessionmaker
@@ -13,7 +15,7 @@ class MethodsMySQL:
         self.session = Session()
 
     def read_yaml(self):
-        with open('config.yaml') as fh:
+        with open(os.path.abspath(os.path.join(os.getcwd(), '..', 'config.yaml'))) as fh:
             return yaml.safe_load(fh)
 
     def insert(self, dict_insert, class_table):

@@ -1,3 +1,4 @@
+import os
 import random
 
 import yaml
@@ -6,7 +7,7 @@ from parser import Parser
 
 if __name__ == '__main__':
     parser = Parser()
-    with open('config.yaml') as fh:
+    with open(os.path.abspath(os.path.join(os.getcwd(), '..', 'config.yaml'))) as fh:
         read_yaml = yaml.safe_load(fh)
     list_proxies = read_yaml[1]['proxies']
     if not list_proxies:

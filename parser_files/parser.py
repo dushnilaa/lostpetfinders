@@ -1,4 +1,5 @@
 import json
+import os
 import time
 from datetime import datetime
 
@@ -19,7 +20,7 @@ class Parser:
         self.proxies = self.read_yaml()[1]['proxies']
 
     def read_yaml(self):
-        with open('config.yaml') as fh:
+        with open(os.path.abspath(os.path.join(os.getcwd(), '..', 'config.yaml'))) as fh:
             return yaml.safe_load(fh)
 
     @classmethod
@@ -137,7 +138,6 @@ class Parser:
 
             if headers:
                 headers = {'User-Agent': UserAgent().chrome}
-            print(proxies)
             request = requests.get(url=start_url, headers=headers, proxies=proxies).text
 
             data = json.loads(request)
@@ -151,7 +151,7 @@ class Parser:
                 id_animal = dict_animal.get('item_id')
                 url = f'https://lostpetfinders.com.au/pets/{id_animal}'
                 result = self.parser_page(url, headers=headers, proxies=proxies)
-                new_dict = self.create_dict(dict_animal | result)
+                new_dict = self.create_dict({**dict_animal, **result})
                 self.my_sql.insert(new_dict, User)
                 time.sleep(self.sleep_sec)
 
