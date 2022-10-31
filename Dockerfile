@@ -10,7 +10,7 @@ COPY --from=builder /root/.local /root/.local
 COPY config.yaml .
 COPY parser_files .
 RUN apt-get update
-RUN apt-get upgrade
+RUN apt-get -y upgrade
 
 RUN apt-get install -y python3-mysqldb
 ENV PATH=/root/.local:$PATH

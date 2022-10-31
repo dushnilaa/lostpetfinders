@@ -107,10 +107,10 @@ class Parser:
         return all_animal
 
     @classmethod
-    def parser_page(cls, url, headers=None, proxy=None):
+    def parser_page(cls, url, headers=None, proxies=None):
         if headers:
             headers = {'User-Agent': UserAgent().chrome}
-        request = requests.get(url=url, headers=headers, proxies=proxy).text
+        request = requests.get(url=url, headers=headers, proxies=proxies).text
 
         tree = html.fromstring(request)
         item_id = tree.xpath('//div[@class="id pull-left"]//h3//text()')[0].lstrip("'ID: ")
@@ -137,8 +137,7 @@ class Parser:
 
             if headers:
                 headers = {'User-Agent': UserAgent().chrome}
-            if proxies:
-                proxies = self.proxies
+            print(proxies)
             request = requests.get(url=start_url, headers=headers, proxies=proxies).text
 
             data = json.loads(request)
@@ -151,7 +150,7 @@ class Parser:
             for dict_animal in result_dicts:
                 id_animal = dict_animal.get('item_id')
                 url = f'https://lostpetfinders.com.au/pets/{id_animal}'
-                result = self.parser_page(url, headers, proxies)
+                result = self.parser_page(url, headers=headers, proxies=proxies)
                 new_dict = self.create_dict(dict_animal | result)
                 self.my_sql.insert(new_dict, User)
                 time.sleep(self.sleep_sec)

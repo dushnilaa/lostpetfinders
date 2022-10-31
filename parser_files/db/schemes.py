@@ -34,7 +34,7 @@ class User(Base):
 name_table = dictionary_data[0]['name_table']
 
 sql_expression = f'''
-CREATE TABLE `{name_table}` (
+CREATE TABLE `parsed_pets` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `status` INT(1) NULL DEFAULT NULL COMMENT '-1 - плохое, 0 - новый, 1 - обработано',
   `animal` INT(1) NULL DEFAULT NULL COMMENT '1 - dog, 2 - cat',
