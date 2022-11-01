@@ -1,10 +1,11 @@
 import os
+import sys
 
 import yaml
 from sqlalchemy import create_engine, Column, String, Integer, Text, JSON
 from sqlalchemy.ext.declarative import declarative_base
 
-with open(os.path.abspath(os.path.join(os.getcwd(), '..', 'config.yaml'))) as fh:
+with open(os.path.abspath(os.path.join(sys.argv[0], '../..', 'config.yaml'))) as fh:
     dictionary_data = yaml.safe_load(fh)
 
 Base = declarative_base()

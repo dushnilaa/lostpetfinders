@@ -1,4 +1,5 @@
 import os
+import sys
 
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import create_engine, update
@@ -9,13 +10,14 @@ import yaml
 
 class MethodsMySQL:
     def __init__(self):
-        engine = create_engine(self.read_yaml()[0]['mysql_path'], echo=True)
+        engine = create_engine(self.read_yaml()[0]['mysql_path'],
+                               echo=True, pool_size=10, pool_recycle=60, pool_pre_ping=True)
         Session = sessionmaker(bind=engine)
         Session.configure(bind=engine)
         self.session = Session()
 
     def read_yaml(self):
-        with open(os.path.abspath(os.path.join(os.getcwd(), '..', 'config.yaml'))) as fh:
+        with open(os.path.abspath(os.path.join(sys.argv[0], '../..', 'config.yaml'))) as fh:
             return yaml.safe_load(fh)
 
     def insert(self, dict_insert, class_table):

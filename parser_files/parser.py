@@ -1,5 +1,7 @@
 import json
 import os
+import re
+import sys
 import time
 from datetime import datetime
 
@@ -20,7 +22,7 @@ class Parser:
         self.proxies = self.read_yaml()[1]['proxies']
 
     def read_yaml(self):
-        with open(os.path.abspath(os.path.join(os.getcwd(), '..', 'config.yaml'))) as fh:
+        with open(os.path.abspath(os.path.join(sys.argv[0], '../..', 'config.yaml'))) as fh:
             return yaml.safe_load(fh)
 
     @classmethod
@@ -61,12 +63,12 @@ class Parser:
                 list_pics.append(pic.get('image'))
             dict_insert['pics'] = list_pics
 
-        if raw_dict.get('animal') == 'Dog':
+        if raw_dict.get('pet_type') == 'Dog':
             dict_insert['animal'] = 1
-        elif raw_dict.get('animal') == 'Cat':
+        elif raw_dict.get('pet_type') == 'Cat':
             dict_insert['animal'] = 2
         else:
-            dict_insert['animal'] = 3
+            dict_insert['animal'] = 0
 
         if raw_dict.get('item_flag') == 'found':
             dict_insert['type'] = 2
@@ -119,9 +121,25 @@ class Parser:
         descriptiion_list = [i.strip() for i in desc]
         descriptiion = ' '.join(descriptiion_list).strip()
 
+        res = re.search("([^@|\s]+@[^@]+\.[^@|\s]+)", descriptiion, re.I)
+        if res:
+            email_list_re = list(res.groups())
+            email_list = ', '.join(email_list_re)
+        else:
+            email_list = None
+
+        line = re.sub('[!@#$ ,?)&{}:;*=+(-]', '', descriptiion)
+        number_phones_re = re.findall('\d{7,15}', line)
+        if number_phones_re:
+            number_phones = ', '.join(number_phones_re)
+        else:
+            number_phones = None
+
         result = {
             'item_id': int(item_id),
-            'description': descriptiion
+            'description': descriptiion,
+            'email': email_list,
+            'phone': number_phones
         }
         return result
 
@@ -148,12 +166,16 @@ class Parser:
 
             result_dicts = self.parser_search_result(list_animal)
             for dict_animal in result_dicts:
-                id_animal = dict_animal.get('item_id')
-                url = f'https://lostpetfinders.com.au/pets/{id_animal}'
-                result = self.parser_page(url, headers=headers, proxies=proxies)
-                new_dict = self.create_dict({**dict_animal, **result})
-                self.my_sql.insert(new_dict, User)
-                time.sleep(self.sleep_sec)
+                if dict_animal.get('pet_type') == 'Dog' or dict_animal.get('pet_type') == 'Cat':
+                    id_animal = dict_animal.get('item_id')
+                    url = f'https://lostpetfinders.com.au/pets/{id_animal}'
+                    result = self.parser_page(url, headers=headers, proxies=proxies)
+                    new_dict = self.create_dict({**dict_animal, **result})
+                    self.my_sql.insert(new_dict, User)
+                    time.sleep(self.sleep_sec)
+                else:
+                    continue
 
             time.sleep(self.sleep_sec)
             count += 9
+
