@@ -33,23 +33,15 @@ class Parser:
                        'phone': raw_dict.get('phone'),
                        'email': raw_dict.get('email'),
                        'author': raw_dict.get('author'),
-                       'descr': raw_dict.get('description')
+                       'descr': raw_dict.get('description'),
+                       'created_at': datetime.now().timestamp()
                        }
 
         if raw_dict.get('item_date_created'):
             time_create = raw_dict.get('item_date_created')
             date = datetime.strptime(time_create, "%Y-%m-%d %H:%M:%S")
             time_stamp = datetime.timestamp(date)
-            dict_insert['created_at'] = int(time_stamp)
-
-        try:
-            if raw_dict.get('item_datefound'):
-                time_found = raw_dict.get('item_datefound')
-                date = datetime.strptime(time_found, "%Y-%m-%d")
-                time_stamp = datetime.timestamp(date)
-                dict_insert['happened_at'] = int(time_stamp)
-        except:
-            pass
+            dict_insert['happened_at'] = int(time_stamp)
 
         if raw_dict.get('item_state') and raw_dict.get('item_suburb'):
             state = raw_dict.get('item_state')
@@ -124,16 +116,24 @@ class Parser:
         res = re.search("([^@|\s]+@[^@]+\.[^@|\s]+)", descriptiion, re.I)
         if res:
             email_list_re = list(res.groups())
-            email_list = ', '.join(email_list_re)
+            email_list = email_list_re[0]
         else:
             email_list = None
 
-        line = re.sub('[!@#$ ,?)&{}:;*=+(-]', '', descriptiion)
-        number_phones_re = re.findall('\d{7,15}', line)
-        if number_phones_re:
-            number_phones = ', '.join(number_phones_re)
+        if re.findall('\d{10,11}', descriptiion):
+            number_phones_re = re.findall('\d{10,11}', descriptiion)
+            if number_phones_re:
+                number_phones = number_phones_re[0]
+                print(number_phones)
+            else:
+                number_phones = None
         else:
-            number_phones = None
+            line = re.sub('[!@#$ ,?)&{}:;*=+(-]', '', descriptiion)
+            number_phones_re = re.findall('\d{7,15}', line)
+            if number_phones_re:
+                number_phones = number_phones_re[0]
+            else:
+                number_phones = None
 
         result = {
             'item_id': int(item_id),
