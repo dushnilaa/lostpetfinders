@@ -170,6 +170,8 @@ class Parser:
                     id_animal = dict_animal.get('item_id')
                     url = f'https://lostpetfinders.com.au/pets/{id_animal}'
                     result = self.parser_page(url, headers=headers, proxies=proxies)
+                    if result.get('phone') is None:
+                        continue
                     new_dict = self.create_dict({**dict_animal, **result})
                     self.my_sql.insert(new_dict, User)
                     time.sleep(self.sleep_sec)
@@ -178,4 +180,3 @@ class Parser:
 
             time.sleep(self.sleep_sec)
             count += 9
-
