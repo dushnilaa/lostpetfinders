@@ -128,8 +128,8 @@ class Parser:
             else:
                 number_phones = None
         else:
-            line = re.sub('[!@#$ ,?)&{}:;*=+(-]', '', descriptiion)
-            number_phones_re = re.findall('\d{7,15}', line)
+            line = re.sub('[!@#$ ?)&{}:;*=+(-]', '', descriptiion)
+            number_phones_re = re.findall('\d{7,12}', line)
             if number_phones_re:
                 number_phones = number_phones_re[0]
             else:
@@ -161,7 +161,7 @@ class Parser:
             data = json.loads(request)
             list_animal = data['items']['items']
             if not list_animal:
-                print(start_url)
+                print('Работа успешно завершена!')
                 break
 
             result_dicts = self.parser_search_result(list_animal)
