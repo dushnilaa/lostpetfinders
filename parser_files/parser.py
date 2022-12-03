@@ -7,7 +7,6 @@ from datetime import datetime
 
 import requests
 import yaml
-from fake_useragent import UserAgent
 from lxml import html
 
 from db.methods import MethodsMySQL
@@ -102,10 +101,8 @@ class Parser:
         return all_animal
 
     @classmethod
-    def parser_page(cls, url, headers=None, proxies=None):
-        if headers:
-            headers = {'User-Agent': UserAgent().chrome}
-        request = requests.get(url=url, headers=headers, proxies=proxies).text
+    def parser_page(cls, url, proxies=None):
+        request = requests.get(url=url, proxies=proxies).text
 
         tree = html.fromstring(request)
         item_id = tree.xpath('//div[@class="id pull-left"]//h3//text()')[0].lstrip("'ID: ")
@@ -143,7 +140,7 @@ class Parser:
         }
         return result
 
-    def download_json(self, headers=True, proxies=None):
+    def download_json(self, proxies=None):
         count = 0
         while True:
 
@@ -154,9 +151,7 @@ class Parser:
                         f'&radius=20&pet_id=&gender=&breed=&color=&listed_after={start_date}&micro_chip=' \
                         f'&lat=-24.9899066&lng=115.2063346&offset={count}&expand_radius=0'
 
-            if headers:
-                headers = {'User-Agent': UserAgent().chrome}
-            request = requests.get(url=start_url, headers=headers, proxies=proxies).text
+            request = requests.get(url=start_url, proxies=proxies).text
 
             data = json.loads(request)
             list_animal = data['items']['items']
@@ -169,7 +164,7 @@ class Parser:
                 if dict_animal.get('pet_type') == 'Dog' or dict_animal.get('pet_type') == 'Cat':
                     id_animal = dict_animal.get('item_id')
                     url = f'https://lostpetfinders.com.au/pets/{id_animal}'
-                    result = self.parser_page(url, headers=headers, proxies=proxies)
+                    result = self.parser_page(url, proxies=proxies)
                     if result.get('phone') is None:
                         continue
                     new_dict = self.create_dict({**dict_animal, **result})
