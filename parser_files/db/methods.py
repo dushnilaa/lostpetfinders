@@ -28,6 +28,7 @@ class MethodsMySQL:
             self.session.commit()
             self.session.close()
         except IntegrityError:
+            self.session.rollback()
             self.session.close()
             # self.update(dict_insert, class_table)
 
